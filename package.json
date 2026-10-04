@@ -1,0 +1,42 @@
+{
+  "name": "dsh-video-see",
+  "version": "0.1.0",
+  "description": "Look at video with your own eyes: a DeepSeek Harness plugin that samples frames with ffmpeg and returns them to the agent as real images, each labelled with its timestamp — no vision API, no API key, nothing leaves the machine.",
+  "license": "MIT",
+  "type": "module",
+  "main": "./lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./plan": "./lib/plan.js",
+    "./media": "./lib/media.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "README.md",
+    "README.en.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test test/plan.test.mjs test/tool.test.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "video",
+    "vision",
+    "ffmpeg",
+    "frames",
+    "multimodal"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}
